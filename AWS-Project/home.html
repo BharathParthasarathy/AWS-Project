@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.24.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="tile" onclick="navigateTo('workout.html')">
+            <h2>Workouts</h2>
+        </div>
+        <div class="tile" onclick="navigateTo('diet.html')">
+            <h2>Diet</h2>
+        </div>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            const token = localStorage.getItem('id_token');
+            if (token) {
+                window.location.href = `${page}?id_token=${token}`;
+            } else {
+                window.location.href = 'main.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('id_token');
+            window.location.href = 'main.html';
+        }
+    </script>
+</body>
+</html>
+

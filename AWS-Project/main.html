@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB Fitness</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Welcome to SB Fitness</h1>
+            <p>Your journey to a healthier life starts here.</p>
+            <button onclick="login()">Login / Sign Up</button>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            window.location.href = "https://sbfitness.auth.us-east-1.amazoncognito.com/login?client_id=59l8q4djsmehvmmme27t57ks52&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https%3A%2F%2Fsbfitness";
+        }
+    </script>
+</body>
+</html>

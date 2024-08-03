@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet</title>
+    <link rel="stylesheet" href="diet.css">
+</head>
+<body>
+    <div class="diet-container">
+        <div class="food-item">
+            <p>Food Item 1</p>
+            <button onclick="addToMeal(this)">Add to Meal</button>
+        </div>
+        <div class="food-item">
+            <p>Food Item 2</p>
+            <button onclick="addToMeal(this)">Add to Meal</button>
+        </div>
+        <!-- Add more food items here -->
+
+        <h3>Your Meal</h3>
+        <div class="meal-box"></div>
+        <p>Total Calories: <span id="total-calories">0</span></p>
+        <p>Total Protein: <span id="total-protein">0</span>g</p>
+    </div>
+
+    <script src="diet.js"></script>
+</body>
+</html>
